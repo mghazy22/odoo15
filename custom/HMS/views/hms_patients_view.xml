@@ -1,0 +1,83 @@
+<odoo>
+    <data>
+
+          <record id="hms_patients_form_view" model="ir.ui.view">
+            <field name="name">Patients tree view</field>
+            <field name="model">hms.patients</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Set good" name="set_good" type="object" attrs="{'invisible':[('state','=','g')]}"/>
+                        <button string="Set Fair" name="set_fair" type="object" attrs="{'invisible':[('state','=','f')]}"/>
+                        <button string="Set Serious" name="set_serious" type="object" attrs="{'invisible':[('state','=','s')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Personal Data">
+                                <field name="First_name"/>
+                                <field name="Last_name"/>
+                                <field name="birthdate"/>
+                                <field name="age"/>
+                                <field name="email" />
+                                 <field name="image" />
+                            </group>
+                            <group string="Medical Data">
+
+                                <field name="ce_ratio" attrs="{'required':[('pcr','=',True)]}"/>
+                                <field name="blood_type"/>
+                                <field name="pcr"/>
+                                <field name="dept_id" domain="[('Is_opened','=',True)]"/>
+                                <field name="dept_capacity"/>
+                                <field name="doct_ids"  widget="many2many_tags" attrs="{'readonly':[('dept_id','=',False)]}" groups="HMS.hms_manager_group"/>
+                            </group>
+                            <notebook>
+                                <page string="History"  attrs="{'invisible':[('age','&lt;','50')]}">
+                                     <field name="history"/>
+                                </page>
+                                <page string="Address">
+                                    <field name="address"/>
+                                </page>
+
+
+
+                                  <page string="Log Files">
+                                      <group>
+                                          <field name="log_history_ids" >
+                                              <tree editable="top">
+                                                  <field name="create_uid" readonly="True"/>
+                                                  <field name="create_date"  readonly="True"/>
+                                                  <field name="description"/>
+                                              </tree>
+                                          </field>
+                                      </group>
+                                  </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+
+        </record>
+        <record id="hms_patients_tree_view" model="ir.ui.view">
+            <field name="name">Patients tree view</field>
+            <field name="model">hms.patients</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="First_name"></field>
+                    <field name="Last_name"></field>
+                    <field name="age"></field>
+                </tree>
+            </field>
+        </record>
+        <record  id="hms_patients_action" model="ir.actions.act_window">
+            <field name="name">Patients</field>
+            <field name="res_model">hms.patients</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hms_parent_menu" name="HMS"/>
+        <menuitem id="hms_Data_menu" name="Data" parent="hms_parent_menu"/>
+        <menuitem id="hms_Patient_menu" name="Patient" parent="hms_Data_menu" action="hms_patients_action"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="vcs_certificate_card">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="certificate">
+                  <t t-call="web.external_layout">
+                    <div class="page" dir="rtl">
+                        <div class="row">
+                            <h1 class="col-sm-12 text-center " style="color:red;font-weight:bold">شهادة صلاحية</h1>
+                        </div>
+                         <div class="row">
+                            <div class="col-sm-12 text-right">
+                              <span style="font-weight:bold">السيد اللواء مدير إدارة مرور /</span>   <span t-out="certificate.traffic_dept_ids.name"/>
+                            </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-sm-10 text-left" >
+                              <span style="font-weight:bold">تحريرا فى</span>  <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"></span>
+                            </div>
+                         </div>
+                          <div class="row">
+                            <span class="col-sm-12 text-center " style="font-weight:bold ">تحية طيبة وبعد ،،،</span>
+                          </div>
+                          <div class="row">
+                              <div class="col-sm-12 text-right">
+                                  <span style="font-weight:bold">أتشرف بإفادة سيادتكم بأنه تم تعديل /</span>   <span t-out="certificate.certificate_Type_ids.name"/>
+                              </div>
+                          </div>
+                        <br/>
+                         <div class="row">
+                            <div class="col-sm-6 text-right">
+                               <span style="font-weight:bold">شاسيه رقم/</span>   <span t-out="certificate.chassis_number"/>
+                            </div>
+                             <div class="col-sm-6 text-right">
+                                 <span style="font-weight:bold">محرك رقم /</span>   <span t-out="certificate.motor_number"/>
+                             </div>
+                         </div>
+                         <br/>
+                         <div class="row">
+                        <div class="col-sm-6 text-right">
+                           <span style="font-weight:bold">الماركه/</span>   <span t-out="certificate.brand_ids.name"/>
+                        </div>
+                         <div class="col-sm-6 text-right">
+                             <span style="font-weight:bold">موديل /</span>   <span t-out="certificate.car_model"/>
+                         </div>
+                        </div>
+                        <br/>
+                         <div class="row">
+                            <div class="col-sm-6 text-right">
+                               <span style="font-weight:bold">إسم المالك /</span>   <span t-out="certificate.customer_ids.name"/>
+                            </div>
+                        </div>
+                        <br/>
+                         <div class="row">
+                              <div class="col-sm-12 text-right">
+                                  <span style="font-weight:bold">حيث أن المؤسسه معتمده بالهيئه العامه للتنمية الصناعية ومصلحة الرقابة الصناعية ومعتمده بإدارات المرور ولها سجل تجارى صناعى وبطاقة ضريبية بهذه الصفة وقد تم فحص التعديل والتركيب و اللحامتات والاصلاحات اللازمة طبقا لاصول الصناعة ودون الإخلال بالتصميم الاصلى ودون المساس بالاجزاء الجوهرية للسياره وقد تم تجربة السيارة على الطرق المصرية ووجد انها متزنة وهذه شهادة منا بذلك لتقديمها للمرور والمالك مسؤول مسؤلية كاملة عن بيانات الشهادة فبرجاء التفدم والتكرم بالموافقة على ترخيص السيارة </span>
+                              </div>
+                          </div>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <span class="col-sm-12 text-center " style="font-weight:bold ">وتفضلوا بقبول فائق الإحترام والتقدير ،،،</span>
+                          </div>
+                    </div>
+                  </t>
+                </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>

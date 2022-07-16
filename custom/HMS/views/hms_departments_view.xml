@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+          <record id="hms_departments_form_view" model="ir.ui.view">
+            <field name="name">Departments tree view</field>
+            <field name="model">hms.departments</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group string="Departments Data">
+                                <field name="Department_name"/>
+                                <field name="Capacity"/>
+                                <field name="Is_opened"/>
+                                <notebook>
+                                    <page string="Patients">
+                                        <group>
+                                            <field name="patient_ids"/>
+                                        </group>
+                                    </page>
+                                    <!--
+                                    <page string="Doctors">
+                                        <group>
+                                            <field name="doctor_ids"/>
+                                        </group>
+                                    </page>
+                                    -->
+                                </notebook>
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="hms_departments_tree_view" model="ir.ui.view">
+            <field name="name">Departments tree view</field>
+            <field name="model">hms.departments</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Department_name"></field>
+                    <field name="Capacity"></field>
+                    <field name="Is_opened"></field>
+
+                </tree>
+            </field>
+        </record>
+        <record  id="hms_departments_action" model="ir.actions.act_window">
+            <field name="name">Departments</field>
+            <field name="res_model">hms.departments</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hms_Department_menu" name="Department" parent="hms_Data_menu" action="hms_departments_action"/>
+    </data>
+</odoo>

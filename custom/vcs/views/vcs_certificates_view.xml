@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+          <record id="vcs_certificates_form_view" model="ir.ui.view">
+            <field name="name">Certificates Form view</field>
+            <field name="model">vcs.certificates</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="%(vcs_certificate_card)d" string="Print" type="action" class="btn-primary" />
+
+                    </header>
+                   <sheet>
+                        <group>
+                            <group>
+                                <field name="serial_no"/>
+                                <field name="Vehicle_Type"/>
+                                <field name="certificate_Type_ids"/>
+                                <field name="traffic_dept_ids"/>
+                                <field name="customer_ids"/>
+                                <field name="price" />
+                            </group>
+                            <group>
+                                <field name="motor_number" />
+                                <field name="chassis_number"/>
+                                <field name="car_model"/>
+                                <field name="brand_ids"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="vcs_certificates_tree_view" model="ir.ui.view">
+            <field name="name">Certificates tree view</field>
+            <field name="model">vcs.certificates</field>
+            <field name="arch" type="xml">
+                <tree>
+                     <field name="serial_no"/>
+                     <field name="Vehicle_Type"/>
+                     <field name="certificate_Type_ids" />
+                     <field name="traffic_dept_ids"/>
+                     <field name="customer_ids"/>
+                     <field name="car_model"/>
+                     <field name="brand_ids"/>
+                     <field name="price" />
+                </tree>
+            </field>
+        </record>
+        <record  id="vcs_certificates_action" model="ir.actions.act_window">
+            <field name="name">Certificates</field>
+            <field name="res_model">vcs.certificates</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record  id="vcs_certificates_type_action" model="ir.actions.act_window">
+            <field name="name">Certificates Type</field>
+            <field name="res_model">vcs.cert_type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record  id="vcs_traffic_dept_action" model="ir.actions.act_window">
+            <field name="name">Traffic Department</field>
+            <field name="res_model">vcs.traffic_dept</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="vcs.vcs_certificate_card" model="ir.actions.report">
+            <field name="binding_model_id" eval="False"/>
+        </record>
+
+
+       <menuitem id="vcs_parent_menu" name="VCS"/>
+       <menuitem id="vcs_cert_type_menu" name="Certificate Types" parent="vcs_parent_menu" action="vcs_certificates_type_action"/>
+       <menuitem id="vcs_cert_menu" name="Certificates" parent="vcs_parent_menu" action="vcs_certificates_action"/>
+       <menuitem id="vcs_traffic_dept_menu" name="Traffic Department" parent="vcs_parent_menu" action="vcs_traffic_dept_action"/>
+
+
+    </data>
+</odoo>

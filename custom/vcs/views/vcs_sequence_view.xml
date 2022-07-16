@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+           <record id="seq_certificate" model="ir.sequence">
+               <field name="name">Certificate Sequence</field>
+               <field name="code">vcs.certificates</field>
+               <field name="prefix">TD</field>
+               <field name="padding">5</field>
+               <field name="company_id" eval="False"/>
+           </record>
+    </data>
+</odoo>

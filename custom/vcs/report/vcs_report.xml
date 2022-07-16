@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <record id="vcs_certificate_card" model="ir.actions.report">
+            <field name="name">Certificate Card</field>
+             <field name="model">vcs.certificates</field>
+           <field name="report_name">vcs.vcs_certificate_card</field>
+            <field name="binding_model_id" ref="model_vcs_certificates"/>
+        </record>
+
+
+    </data>
+</odoo>

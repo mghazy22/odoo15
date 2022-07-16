@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+vcs.access_vcs_certificates,access_vcs_certificates,vcs.model_vcs_certificates,vcs_users_group,1,0,1,0
+vcs.access_vcs_brand,access_vcs_brand,vcs.model_vcs_brand,vcs_users_group,1,0,0,0
+vcs.access_vcs_cert_type,access_vcs_cert_type,vcs.model_vcs_cert_type,vcs_users_group,1,0,0,0
+vcs.access_vcs_customers,access_vcs_customers,vcs.model_vcs_customers,vcs_users_group,1,0,0,0
+vcs.access_vcs_traffic_dept,access_vcs_traffic_dept,vcs.model_vcs_traffic_dept,vcs_users_group,1,0,0,0
+
+vcs.access_supervisors_vcs_certificates,vcs.access_supervisors_vcs_certificates,vcs.model_vcs_certificates,vcs_supervisors_group,1,1,1,1
+vcs.access_supervisors_vcs_brand,vcs.access_supervisors_vcs_brand,vcs.model_vcs_brand,vcs_supervisors_group,1,1,1,1
+vcs.access_supervisors_vcs_cert_type,vcs.access_supervisors_vcs_cert_type,vcs.model_vcs_cert_type,vcs_supervisors_group,1,1,1,1
+vcs.access_supervisors_vcs_customers,vcs.access_supervisors_vcs_customers,vcs.model_vcs_customers,vcs_supervisors_group,1,1,1,1
+vcs.access_supervisors_vcs_traffic_dept,vcs.access_supervisors_vcs_traffic_dept,vcs.model_vcs_traffic_dept,vcs_supervisors_group,1,1,1,1

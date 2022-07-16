@@ -1,0 +1,258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vcs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-16 20:24+0000\n"
+"PO-Revision-Date: 2022-07-16 22:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__brand_ids
+msgid "Brand"
+msgstr "علامة تجارية"
+
+#. module: vcs
+#: model:ir.model.fields.selection,name:vcs.selection__vcs_certificates__Vehicle_Type__b
+msgid "Bus"
+msgstr "حافله"
+
+#. module: vcs
+#: model:ir.model.fields.selection,name:vcs.selection__vcs_certificates__Vehicle_Type__ca
+msgid "Car"
+msgstr "سيارة"
+
+#. module: vcs
+#: model:ir.model,name:vcs.model_vcs_brand
+msgid "Car Brands"
+msgstr "ماركة سيارات"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__car_model
+msgid "Car Model"
+msgstr "موديل سيارة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__cert_ids
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__cert_ids
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__cert_ids
+msgid "Cert"
+msgstr "شهادة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__certificate_ids
+msgid "Certificate"
+msgstr "شهادة"
+
+#. module: vcs
+#: model:ir.actions.report,name:vcs.vcs_certificate_card
+msgid "Certificate Card"
+msgstr "بطاقة الشهادة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__certificate_Type_ids
+msgid "Certificate Type"
+msgstr "نوع الشهادة"
+
+#. module: vcs
+#: model:ir.model,name:vcs.model_vcs_cert_type
+#: model:ir.ui.menu,name:vcs.vcs_cert_type_menu
+msgid "Certificate Types"
+msgstr "نوع الشهادة"
+
+#. module: vcs
+#: model:ir.actions.act_window,name:vcs.vcs_certificates_action
+#: model:ir.ui.menu,name:vcs.vcs_cert_menu
+msgid "Certificates"
+msgstr "الشهادة"
+
+#. module: vcs
+#: model:ir.actions.act_window,name:vcs.vcs_certificates_type_action
+msgid "Certificates Type"
+msgstr "نوع الشهادة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__chassis_number
+msgid "Chassis Number"
+msgstr "رقم الشاسيه"
+
+#. module: vcs
+#: model:ir.model,name:vcs.model_res_partner
+msgid "Contact"
+msgstr "اتصال"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__create_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__create_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__create_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__create_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__create_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__create_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__create_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__create_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__create_date
+msgid "Created on"
+msgstr "أنشئ فى"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__customer_ids
+msgid "Customer"
+msgstr "عميل"
+
+#. module: vcs
+#: model:ir.actions.act_window,name:vcs.vcs_customers_action
+#: model:ir.model,name:vcs.model_vcs_customers
+#: model:ir.ui.menu,name:vcs.vcs_customers_menu
+msgid "Customers"
+msgstr "عملاء"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__display_name
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__display_name
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__display_name
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__display_name
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__id
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__id
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__id
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__id
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand____last_update
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type____last_update
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates____last_update
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers____last_update
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept____last_update
+msgid "Last Modified on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__write_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__write_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__write_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__write_uid
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__write_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__write_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__write_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__write_date
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل فى"
+
+#. module: vcs
+#: model:ir.model.fields.selection,name:vcs.selection__vcs_certificates__Vehicle_Type__mc
+msgid "Microbus"
+msgstr "ميكروباص"
+
+#. module: vcs
+#: model:ir.model.fields.selection,name:vcs.selection__vcs_certificates__Vehicle_Type__mn
+msgid "Minibus"
+msgstr "مينى باص"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__motor_number
+msgid "Motor Number"
+msgstr "رقم الموتور"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_brand__name
+#: model:ir.model.fields,field_description:vcs.field_vcs_cert_type__name
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__name
+#: model:ir.model.fields,field_description:vcs.field_vcs_traffic_dept__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_customers__phone
+msgid "Phone"
+msgstr "التليفون"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__price
+msgid "Price"
+msgstr "السعر"
+
+#. module: vcs
+#: model_terms:ir.ui.view,arch_db:vcs.vcs_certificates_form_view
+msgid "Print"
+msgstr "طباعه"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_res_partner__related_customer_id
+#: model:ir.model.fields,field_description:vcs.field_res_users__related_customer_id
+msgid "Related Customer"
+msgstr "العميل المتصل"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__serial_no
+msgid "Serial No"
+msgstr "الرقم التسلسلى"
+
+#. module: vcs
+#: model:res.groups,name:vcs.vcs_supervisors_group
+msgid "Supervisors"
+msgstr "مشرفين"
+
+#. module: vcs
+#: model:ir.actions.act_window,name:vcs.vcs_traffic_dept_action
+#: model:ir.model,name:vcs.model_vcs_traffic_dept
+#: model:ir.ui.menu,name:vcs.vcs_traffic_dept_menu
+msgid "Traffic Department"
+msgstr "قسم المرور"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__traffic_dept_ids
+msgid "Traffic Dept"
+msgstr "قسم المرور"
+
+#. module: vcs
+#: model:res.groups,name:vcs.vcs_users_group
+msgid "User"
+msgstr "المستخدم"
+
+#. module: vcs
+#: model:ir.ui.menu,name:vcs.vcs_parent_menu
+msgid "VCS"
+msgstr "نظام شهادات التحقق"
+
+#. module: vcs
+#: model:ir.model,name:vcs.model_vcs_certificates
+msgid "Validation Certificates"
+msgstr "شهادات التحقق"
+
+#. module: vcs
+#: model:ir.model.fields,field_description:vcs.field_vcs_certificates__Vehicle_Type
+msgid "Vehicle Type"
+msgstr "نوع وسيلة النقل"
+
+#. module: vcs
+#: model:ir.module.category,name:vcs.vcs_category_groups
+msgid "vcs"
+msgstr "نظام شهادات التحقق"
