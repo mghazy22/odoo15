@@ -6,8 +6,10 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                        <button name="%(vcs_certificate_card)d" string="Print" type="action" class="btn-primary" />
-
+                        <button name="print_rpt" string="Print" type="object" class="oe_highlight" groups="vcs.vcs_users_group" />
+                        <!-- <button name="print_report" string="Print once" type="object" class="oe_highlight" />-->
+                        <button name="allow_reprint" string="Allow RePrint" type="object" class="btn-primary" groups="vcs.vcs_supervisors_group"/>
+                        <button name="%(vcs_certificate_card)d" string="Print" type="action" class="btn-primary" groups="vcs.vcs_supervisors_group" />
                     </header>
                    <sheet>
                         <group>

@@ -1,4 +1,4 @@
-from odoo import models, fields, api,_
+from odoo import models, fields, api, _, exceptions
 import re, datetime as dt
 
 
@@ -21,6 +21,8 @@ class VcsCertificates(models.Model):
     chassis_number = fields.Char()
     car_model = fields.Selection(selection='getyear')
     brand_ids = fields.Many2one("vcs.brand")
+    allow_print = fields.Boolean(default='False')
+    click = fields.Boolean(default='False')
 
     @api.model
     def create(self, vals):
@@ -39,4 +41,17 @@ class VcsCertificates(models.Model):
             years.append(str(current_year))
         data = list(zip(years, years))
         return data
+
+    def print_rpt(self):
+        if self.click == False:
+            self.click ='True'
+            return self.env.ref('vcs.vcs_certificate_card').report_action(self, data={}, config=False)
+        elif self.allow_print:
+            return self.env.ref('vcs.vcs_certificate_card').report_action(self, data={}, config=False)
+        elif self.allow_print == False & self.click ==True:
+            raise exceptions.ValidationError("you printed once")
+
+
+    def allow_reprint(self):
+        self.allow_print = 'True'
 
